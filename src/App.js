@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter,Routes,Route } from 'react-router-dom';
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer"
 import HalamanHome from "../src/Pages/Home";
@@ -9,7 +9,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="App font-[consolas]">
         <div className="h-screen w-full flex items-center justify-center">
           <div className="large-2 bg-black h-[85%] w-[90%] overflow-y-auto">
@@ -24,7 +24,7 @@ function App() {
           </div>
         </div>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
