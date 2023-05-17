@@ -1,0 +1,44 @@
+.vertical-timeline-element-content {
+  border: 1px solid;
+  color: #ffff;
+  background: transparent;
+}
+
+.vertical-timeline-element-icon {
+  background: #ffff;
+  font-size: 50px;
+  color: #000000;
+  border: 3px solid #000000;
+}
+
+.vertical-timeline-element-date {
+  margin: 0 15px 0 15px !important;
+}
+
+.vertical-timeline-element-content:nth-child(2):hover {
+  -webkit-box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+  box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 1);
+  transition: 0.4s ease-in-out;
+}
+
+
+.vertical-timeline-element:nth-child(1):hover .vertical-timeline-element-content,
+.vertical-timeline-element:nth-child(3):hover .vertical-timeline-element-content {
+  -webkit-box-shadow: -6px 6px 0px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow: -6px 6px 0px 0px rgba(255, 255, 255, 1);
+  box-shadow: -6px 6px 0px 0px rgba(255, 255, 255, 1);
+}
+
+@media only screen and (max-width: 1700px) {
+  .vertical-timeline-element-date {
+    display: block !important;
+    float: none !important;
+  }
+}
+
+@media (max-width: 1170px) {
+  .vertical-timeline-element-date {
+    margin: 0 0px 0 0px !important;
+  }
+}
