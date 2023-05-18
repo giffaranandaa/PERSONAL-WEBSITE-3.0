@@ -28,7 +28,7 @@ const Project = () => {
     <>
         <Transition timeline={project} onComplete={() => setShowComponent(true)} />
       {showComponent && (
-    <div className="text-white px-2 lg:px-32 py-5 lg:py-12" ref={projectLogo}>
+    <div className="text-white px-2 lg:px-32 py-10" ref={projectLogo}>
         <HeadProject/>
       <Card/>
     </div>
