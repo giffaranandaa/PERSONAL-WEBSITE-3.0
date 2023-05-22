@@ -31,7 +31,7 @@ export const Navbar = () => {
   return (
     <>
       <div
-        className={`text-white w-[90%] fixed z-[40] ${
+        className={`text-white w-[94%] lg:w-[91%] fixed z-[40] ${
           isScrolled ? '-top-14 transition-all ease-in-out duration-500' : 'bg-transparent'
         }`}
       >

@@ -8,17 +8,18 @@ const timelineElements = [
     }, 
     {
         key:2,
+        name : "Fabira Movie",
+        description: "Movie Trailer And TV Series Streaming Website. About Synopsis, Actors, Rating, and Director,Streaming Trailer,Movie Synopsis. This website was created to qualify for bootcamp harisenin.com",
+        tech: "React Tailwind Express MySQL",
+        url: "https://final-project-kelompok-8.vercel.app/"
+    },
+    {
+        key:3,
         name : "Page Transition",
         description: "transition page using React Router DOM and GSAP technologies. These transition pages provide a smooth and engaging experience as users move from one page to another.",
         tech: "React GSAP",
         url: "https://github.com/gipparananda/Page-Transisition-Gsap"
-    },
-    {
-        key:3,
-        name : "Movies Spiderman Website",
-        description: "Websites about Spiderman movies use HTML and Tailwind CSS. By combining HTML and Tailwind CSS, you can create an attractive and responsive website about Spiderman No Way Home.",
-        tech: "HTML Tailwind",
-        url: "https://github.com/gipparananda/spider-web"
+        
     },
     {
         key:4,
