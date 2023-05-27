@@ -1,9 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import {CgMenuLeft} from 'react-icons/cg'
+import {BiX} from 'react-icons/bi'
 
 export const Navbar = () => {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [open,setOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setOpen(!open)
+  }
+
+  const closeMenu = () => {
+    setOpen(true);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setOpen(window.innerWidth < 640);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,36 +57,56 @@ export const Navbar = () => {
     <>
       <div
         className={`text-white w-[94%] lg:w-[91%] fixed z-[40] ${
-          isScrolled ? '-top-14 transition-all ease-in-out duration-500' : 'bg-transparent'
+          isScrolled ? 'hidden' : 'bg-transparent'
         }`}
       >
-        <div>
-          
+        <div className="relative md:hidden text-[40px]">
+          <button className="absolute z-[50] left-0 top-1 -rotate-90" onClick={toggleMenu}>
+            {open ?(
+              <CgMenuLeft/>
+            ) : (
+              <BiX className="text-black"/>
+            )}
+          </button>
         </div>
-        <ul className="flex items-center justify-center">
-          <div className="flex flex-row gap-5">
-            <NavLink to="/" className="text-[20px] relative nav">
+        <ul className="flex items-center md:justify-center mt-10 md:mt-0">
+          <div className={`flex flex-col md:flex-row gap-5 bg-white absolute top-0 pt-12 md:pt-0 px-3 md:px-0 h-[85vh] md:h-0 w-[96%] md:static md:w-auto ${open? "left-[490px]" : "text-black md:text-white "}`}> 
+            <NavLink 
+              onClick={() => {
+                closeMenu();
+              }} 
+              to="/" 
+              className="md:text-[20px] text-[30px] relative nav">
               HOME
             </NavLink>
-            <NavLink
+            <NavLink 
+              onClick={() => {
+                closeMenu();
+              }}
               to="/about"
-              className={`text-[20px] relative nav ${
+              className={`md:text-[20px] text-[30px] relative nav ${
                 location.pathname === '/about' ? 'line-through' : ''
               }`}
             >
               ABOUT
             </NavLink>
             <NavLink
+              onClick={() => {
+                closeMenu();
+              }} 
               to="/project"
-              className={`text-[20px] relative nav ${
+              className={`md:text-[20px] text-[30px] relative nav ${
                 location.pathname === '/project' ? 'line-through' : ''
               }`}
             >
               PROJECT
             </NavLink>
             <NavLink
+              onClick={() => {
+                closeMenu();
+              }} 
               to="/contact"
-              className={`text-[20px] relative nav ${
+              className={`md:text-[20px] text-[30px] relative nav ${
                 location.pathname === '/contact' ? 'line-through' : ''
               }`}
             >

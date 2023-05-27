@@ -25,7 +25,8 @@ const timelineElements = [
         key:4,
         name : "Personal Website V1",
         description: "My first personal website was created using HTML and CSS technology. This website is my first work in learning and developing web development skills",
-        tech: "HTML CSS"
+        tech: "HTML CSS",
+        url : "https://github.com/gipparananda/PERSONAL-PORTFOLIO-1.0"
     },
     {
         key:5,
@@ -39,7 +40,7 @@ const timelineElements = [
         name: "Fake Store",
         description: "The app uses React Redux, which allows users to purchase fake clothes from the fake data API provided.",
         tech: "React-Redux Tailwind",
-        url: "https://github.com/MasAnton/Final_project_kelompok-8"    
+        url: "https://github.com/gipparananda/Fake-Store-Redux"    
     },
 
 ]

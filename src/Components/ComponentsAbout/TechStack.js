@@ -1,21 +1,22 @@
 import React from 'react'
-import {AiFillWindows,AiFillHtml5} from 'react-icons/ai'
-import {SiLinux,SiTailwindcss,SiBootstrap,SiNodedotjs,SiPhp} from 'react-icons/si'
-import {FaReact} from 'react-icons/fa'
 
 const TechStack = () => {
   return (
     <div className="text-white mb-5 flex flex-col items-center justify-center">
         <h1 className="text-xl mt-2 font-semibold">Tech Stack :</h1>
-        <div className="mt-3 text-[23px] md:text-[30px] grid grid-cols-8 md:grid-cols-8 gap-4">
-            <AiFillWindows/>
-            <SiLinux/>
-            <AiFillHtml5/>
-            <SiTailwindcss/>
-            <SiBootstrap/>
-            <FaReact/>
-            <SiNodedotjs/>
-            <SiPhp/>
+        <div className="mt-5 flex gap-10 text-zinc-300"> 
+          <div>
+            <li>Ms Windows</li>
+            <li>Linux</li>
+          </div>
+          <div>
+            <li>HTML</li>
+            <li>CSS</li>
+          </div>
+          <div>
+            <li>JavaScript</li>
+            <li>PHP</li>
+          </div>
         </div>
     </div>
   )
