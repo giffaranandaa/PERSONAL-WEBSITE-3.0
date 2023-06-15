@@ -18,7 +18,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setOpen(window.innerWidth < 640);
+      setOpen(window.innerWidth < 768);
     };
 
     handleResize();
@@ -69,8 +69,8 @@ export const Navbar = () => {
             )}
           </button>
         </div>
-        <ul className="flex items-center md:justify-center mt-10 md:mt-0">
-          <div className={`flex flex-col md:flex-row gap-5 bg-white absolute top-0 pt-12 md:pt-0 px-3 md:px-0 h-[85vh] md:h-0 w-[96%] md:static md:w-auto ${open? "left-[490px]" : "text-black md:text-white "}`}> 
+        <ul className="flex items-center md:justify-center mt-10 md:mt-1">
+          <div className={`flex flex-col md:flex-row gap-5 bg-white absolute top-0 pt-12 md:pt-0 px-3 md:px-0 h-[85vh] md:h-0 w-[105%] md:static md:w-auto lg:ml-28 ${open? "top-[4000px]" : "text-black md:text-white "}`}> 
             <NavLink 
               onClick={() => {
                 closeMenu();

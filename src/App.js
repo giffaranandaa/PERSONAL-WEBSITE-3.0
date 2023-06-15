@@ -6,13 +6,15 @@ import HalamanAboutMe from "./Pages/AboutMe";
 import HalamanProject from "../src/Pages/Project";
 import HalamanContact from "../src/Pages/Contact";
 import './index.css';
+import Particle from './Components/Particle';
 
 function App() {
   return (
     <HashRouter>
       <div className="App text-white font-[consolas]">
-        <div className="h-screen w-full flex items-center justify-center">
-          <div className="large-2 bg-black h-[85%] w-[90%] overflow-y-auto text-white">
+        <div className="relative h-screen w-full flex items-center justify-center">
+        <Particle />
+          <div className="large-2">
             <Navbar />
             <Routes>
               <Route path="/" element={<HalamanHome />} />

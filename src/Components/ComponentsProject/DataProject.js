@@ -15,18 +15,18 @@ const timelineElements = [
     },
     {
         key:3,
-        name : "Page Transition",
-        description: "transition page using React Router DOM and GSAP technologies. These transition pages provide a smooth and engaging experience as users move from one page to another.",
+        name : "Equran Web",
+        description: "uses the Axios library to retrieve data from equran.id. With verse and audio search features, it makes it easier for users to explore and understand the deep messages of the holy Quran. ",
         tech: "React GSAP",
-        url: "https://github.com/gipparananda/Page-Transisition-Gsap"
+        url: "https://equran-webapp.vercel.app/"
         
     },
     {
         key:4,
-        name : "Personal Website V1",
-        description: "My first personal website was created using HTML and CSS technology. This website is my first work in learning and developing web development skills",
-        tech: "HTML CSS",
-        url : "https://github.com/gipparananda/PERSONAL-PORTFOLIO-1.0"
+        name: "Fake Store",
+        description: "The app uses React Redux, which allows users to purchase fake clothes from the fake data API provided.",
+        tech: "React-Redux Tailwind",
+        url: "https://github.com/gipparananda/Fake-Store-Redux"  
     },
     {
         key:5,
@@ -37,10 +37,10 @@ const timelineElements = [
     },
     {
         key:6,
-        name: "Fake Store",
-        description: "The app uses React Redux, which allows users to purchase fake clothes from the fake data API provided.",
-        tech: "React-Redux Tailwind",
-        url: "https://github.com/gipparananda/Fake-Store-Redux"    
+        name : "Personal Website V1",
+        description: "My first personal website was created using HTML and CSS technology. This website is my first work in learning and developing web development skills",
+        tech: "HTML CSS",
+        url : "https://github.com/gipparananda/PERSONAL-PORTFOLIO-1.0"
     },
 
 ]
