@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import {CgMenuLeft} from 'react-icons/cg'
-import {BiX} from 'react-icons/bi'
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { CgMenuLeft } from "react-icons/cg";
+import { BiX } from "react-icons/bi";
 
 export const Navbar = () => {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [open,setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const toggleMenu = () => {
-    setOpen(!open)
-  }
+    setOpen(!open);
+  };
 
   const closeMenu = () => {
     setOpen(true);
@@ -23,16 +23,16 @@ export const Navbar = () => {
 
     handleResize();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      const navbarDiv = document.querySelector('.large-2');
+      const navbarDiv = document.querySelector(".large-2");
       if (navbarDiv) {
         const isOverflowed =
           navbarDiv.scrollHeight > navbarDiv.clientHeight &&
@@ -41,14 +41,14 @@ export const Navbar = () => {
       }
     };
 
-    const navbarDiv = document.querySelector('.large-2');
+    const navbarDiv = document.querySelector(".large-2");
     if (navbarDiv) {
-      navbarDiv.addEventListener('scroll', handleScroll);
+      navbarDiv.addEventListener("scroll", handleScroll);
     }
 
     return () => {
       if (navbarDiv) {
-        navbarDiv.removeEventListener('scroll', handleScroll);
+        navbarDiv.removeEventListener("scroll", handleScroll);
       }
     };
   }, []);
@@ -57,60 +57,57 @@ export const Navbar = () => {
     <>
       <div
         className={`text-white w-[94%] lg:w-[91%] fixed z-[40] ${
-          isScrolled ? 'hidden' : 'bg-transparent'
-        }`}
-      >
+          isScrolled ? "hidden" : "bg-transparent"
+        }`}>
         <div className="relative md:hidden text-[40px]">
-          <button className="absolute z-[50] left-0 top-1 -rotate-90" onClick={toggleMenu}>
-            {open ?(
-              <CgMenuLeft/>
-            ) : (
-              <BiX className="text-black"/>
-            )}
+          <button
+            className="absolute z-[50] left-0 top-1 -rotate-90"
+            onClick={toggleMenu}>
+            {open ? <CgMenuLeft /> : <BiX className="text-black" />}
           </button>
         </div>
         <ul className="flex items-center md:justify-center mt-10 md:mt-1">
-          <div className={`flex flex-col md:flex-row gap-5 bg-white absolute top-0 pt-12 md:pt-0 px-3 md:px-0 h-[85vh] md:h-0 w-[105%] md:static md:w-auto lg:ml-28 ${open? "top-[4000px]" : "text-black md:text-white "}`}> 
-            <NavLink 
+          <div
+            className={`flex flex-col md:flex-row gap-5 bg-white absolute top-0 pt-12 md:pt-0 px-3 md:px-0 h-[85vh] md:h-0 w-[105%] md:static md:w-auto lg:ml-28 ${
+              open ? "top-[4000px]" : "text-black md:text-white"
+            }`}>
+            <NavLink
               onClick={() => {
                 closeMenu();
-              }} 
-              to="/" 
+              }}
+              to="/"
               className="md:text-[20px] text-[30px] relative nav">
-              HOME
+              Home
             </NavLink>
-            <NavLink 
+            <NavLink
               onClick={() => {
                 closeMenu();
               }}
               to="/about"
               className={`md:text-[20px] text-[30px] relative nav ${
-                location.pathname === '/about' ? 'line-through' : ''
-              }`}
-            >
-              ABOUT
+                location.pathname === "/about" ? "line-through" : ""
+              }`}>
+              About
             </NavLink>
             <NavLink
               onClick={() => {
                 closeMenu();
-              }} 
+              }}
               to="/project"
               className={`md:text-[20px] text-[30px] relative nav ${
-                location.pathname === '/project' ? 'line-through' : ''
-              }`}
-            >
-              PROJECT
+                location.pathname === "/project" ? "line-through" : ""
+              }`}>
+              Project
             </NavLink>
             <NavLink
               onClick={() => {
                 closeMenu();
-              }} 
+              }}
               to="/contact"
               className={`md:text-[20px] text-[30px] relative nav ${
-                location.pathname === '/contact' ? 'line-through' : ''
-              }`}
-            >
-              CONTACT
+                location.pathname === "/contact" ? "line-through" : ""
+              }`}>
+              Contact
             </NavLink>
           </div>
         </ul>
